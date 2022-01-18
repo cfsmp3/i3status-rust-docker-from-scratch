@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-PACKAGE_VERSION="0.20.7"
+PACKAGE_VERSION="0.21.1"
 
 
 mkdir -p packaging

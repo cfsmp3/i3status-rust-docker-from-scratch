@@ -9,7 +9,8 @@ dquilt () {
 
 cd /packaging
 base="i3status-rust-${PACKAGE_VERSION}"
-wget -q -O "${base}.tar.gz" "https://github.com/greshake/i3status-rust/archive/refs/tags/v${PACKAGE_VERSION}.tar.gz"
+release="https://github.com/greshake/i3status-rust/archive/refs/tags/v${PACKAGE_VERSION}.tar.gz"
+wget -q -O "${base}.tar.gz" $release || { echo  "wget failed (${release})." ; exit 1 ; }
 
 tar -xvzf ${base}.tar.gz
 mv ${base} regolith-${base}
